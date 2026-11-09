@@ -22,7 +22,17 @@ tags:
 - 图片直接粘进 Obsidian，落到 `content/assets/`，会自动 slug 成 `pasted-image-*.png` 并正确引用。
 - 越简单的 Obsidian 语法越稳：`#标题`、`**加粗**`、`- 列表`、`> 引用`、```` ``` ```` 代码块、`[[双链]]`、`![[图片]]`。`dataview` / 部分插件语法不会渲染。
 
-## 2. 发布到 GitHub Pages（现用，地址 https://niuniu-999.github.io/）
+## 2. 本地预览（改笔记时用）
+
+```powershell
+cd C:\Users\32948\Desktop\ctf
+.\preview.ps1                    # 打开 http://localhost:8080
+.\preview.ps1 -Port 8081         # 端口被占用时换一个
+```
+
+带 `--watch` 热重载：保存 `content/` 里的文件后浏览器自动刷新，URL 结构和线上完全一致（`/about`、`/ctf-writeups/lrtctf` 这种干净链接）。Ctrl+C 停止。
+
+## 3. 发布到 GitHub Pages（现用，地址 https://niuniu-999.github.io/）
 
 ```powershell
 cd C:\Users\32948\Desktop\ctf
@@ -40,7 +50,7 @@ git fetch origin
 git reset --hard origin/main
 ```
 
-## 3. 国内访问方案
+## 4. 国内访问方案
 
 现在 https://niuniu-999.github.io/ 实测 0.5s 打开（静态资源已全部自托管，没有 Google Fonts 之类的墙外依赖）。如果某些地区还是慢，按下面任选一个做镜像：
 
@@ -72,11 +82,12 @@ git push gitee main
 
 （Gitee 免费版 Pages 已停止新开通，所以这里只当代码备份/协作源，不做站点托管。）
 
-## 4. 目录速查
+## 5. 目录速查
 
 - `content/` 笔记源文件
 - `public/` 构建产物（自动生成，不要手改）
 - `quartz.config.yaml` 站点配置：标题、语言、字体、插件
 - `.github/workflows/deploy.yml` 推送 main 后自动构建部署
+- `preview.ps1` 本地实时预览
 - `publish.ps1` 一键发布（GitHub）
 - `deploy-cf.ps1` 一键发布（Cloudflare Pages）
