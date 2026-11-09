@@ -5,6 +5,10 @@ tags: [ctf, misc, crypto, reverse]
 description: LRTCTF 2026 七道题：JPEG 尾部隐写、RSA 低指数广播攻击、RSA 手算、可逆变换逆向、UPX + 自定义虚拟机逆向、和差方程组逆向、EXIF 拍摄地分析
 ---
 
+---
+
+📄 原始题面与完整推导过程：[LRTCTF 校赛 Writeup（PDF）](./lrtctf_writeup.pdf)
+
 ## 1. In Girl（Misc）
 
 `girl.zip` 解压后得到实际为 JPEG 的 `girl.png`。搜索文件特征可看到：
