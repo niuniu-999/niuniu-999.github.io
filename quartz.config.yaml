@@ -7,15 +7,16 @@ configuration:
   analytics:
     provider: ""
   locale: zh-CN
-  baseUrl: https://niuniu-999.github.io
+  baseUrl: niuniu-999.github.io
   ignorePatterns:
     - private
     - templates
     - .obsidian
     - .trash
     - .git
+    - ctf私人令牌.md
   theme:
-    fontOrigin: googleFonts
+    fontOrigin: local
     cdnCaching: true
     typography:
       header: Schibsted Grotesk
@@ -99,6 +100,12 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    options:
+      fontOrigin: local
+      useThemeFonts: false
+      body: 'system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif'
+      header: 'system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif'
+      code: '"JetBrains Mono", "Cascadia Code", Consolas, "Courier New", monospace'
   - source: "@quartz-themes/core"
     enabled: false
     options:
