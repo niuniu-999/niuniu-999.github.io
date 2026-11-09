@@ -37,8 +37,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Debug env
+        run: |
+          node --version
+          npm --version
+          ls -la node_modules/.bin/ | grep quartz || true
+          ls -la quartz/bootstrap-cli.mjs
+          echo "--- which quartz ---"
+          which quartz || true
+          echo "--- npx --version ---"
+          npx --version
+
       - name: Build Quartz
-        run: npx quartz build
+        run: node ./quartz/bootstrap-cli.mjs build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
