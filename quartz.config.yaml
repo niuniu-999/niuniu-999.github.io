@@ -112,7 +112,7 @@ plugins:
       theme: tokyo-night
       mode: both
   - source: "@quartz-community/explicit-publish"
-    enabled: true
+    enabled: false
     order: 46
   - source: "@quartz-community/alias-redirects"
     enabled: true
