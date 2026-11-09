@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: ""
   locale: zh-CN
-  baseUrl: http://localhost
+  baseUrl: https://niuniu.github.io
   ignorePatterns:
     - private
     - templates
@@ -196,7 +196,7 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/your-username
+        GitHub: https://github.com/niuniu
     layout:
       position: footer
       priority: 50
